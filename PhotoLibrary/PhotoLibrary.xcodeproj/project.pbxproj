@@ -16,6 +16,8 @@
 		4084F81A253A7DA400D2E0B6 /* PhotoLibraryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084F819253A7DA400D2E0B6 /* PhotoLibraryUITests.swift */; };
 		4084F82F253A80A100D2E0B6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084F82E253A80A100D2E0B6 /* Photo.swift */; };
 		4084F836253A80CD00D2E0B6 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084F835253A80CD00D2E0B6 /* Identifiable.swift */; };
+		408EA809253A84C00040C725 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA808253A84C00040C725 /* Coordinator.swift */; };
+		408EA811253A85B50040C725 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA810253A85B50040C725 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		4084F81B253A7DA400D2E0B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4084F82E253A80A100D2E0B6 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		4084F835253A80CD00D2E0B6 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		408EA808253A84C00040C725 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		408EA810253A85B50040C725 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,8 @@
 		408EA807253A848C0040C725 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				408EA808253A84C00040C725 /* Coordinator.swift */,
+				408EA810253A85B50040C725 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -318,9 +324,11 @@
 			files = (
 				4084F7FF253A7DA100D2E0B6 /* PhotoLibrary.xcdatamodeld in Sources */,
 				4084F836253A80CD00D2E0B6 /* Identifiable.swift in Sources */,
+				408EA809253A84C00040C725 /* Coordinator.swift in Sources */,
 				4084F7F5253A7DA100D2E0B6 /* AppDelegate.swift in Sources */,
 				4084F7F7253A7DA100D2E0B6 /* SceneDelegate.swift in Sources */,
 				4084F82F253A80A100D2E0B6 /* Photo.swift in Sources */,
+				408EA811253A85B50040C725 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
