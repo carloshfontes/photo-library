@@ -43,6 +43,19 @@ class PhotoLibraryViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+//        let photoClient = PhotoClient()
+//        photoClient.getRandomPhotos { (result) in
+//            switch result {
+//
+//            case .success(let photos):
+//                print(photos)
+//            case .failure(let error):
+//                print(error.description)
+//            }
+//        }
+    }
+    
     // MARK: - Methods
     
     private func setupUI(){

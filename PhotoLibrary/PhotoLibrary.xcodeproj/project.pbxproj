@@ -29,6 +29,13 @@
 		408EA857253A93650040C725 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA856253A93650040C725 /* ScreenSize.swift */; };
 		408EA85F253A96520040C725 /* PhotoLibraryCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA85E253A96520040C725 /* PhotoLibraryCollectionViewDataSource.swift */; };
 		408EA864253A97240040C725 /* PhotoLibraryCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA863253A97240040C725 /* PhotoLibraryCollectionViewDelegate.swift */; };
+		408EA875253A9D500040C725 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA874253A9D500040C725 /* ServiceProtocol.swift */; };
+		408EA87A253A9DF10040C725 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA879253A9DF10040C725 /* APIError.swift */; };
+		408EA87F253A9E1D0040C725 /* Descriptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA87E253A9E1D0040C725 /* Descriptable.swift */; };
+		408EA884253A9E3F0040C725 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA883253A9E3F0040C725 /* APIClient.swift */; };
+		408EA88A253A9E9E0040C725 /* PhotoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA889253A9E9E0040C725 /* PhotoClient.swift */; };
+		408EA892253A9F2C0040C725 /* BaseParameterPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA891253A9F2C0040C725 /* BaseParameterPhoto.swift */; };
+		408EA897253A9F820040C725 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA896253A9F820040C725 /* PhotoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +84,13 @@
 		408EA856253A93650040C725 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
 		408EA85E253A96520040C725 /* PhotoLibraryCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		408EA863253A97240040C725 /* PhotoLibraryCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		408EA874253A9D500040C725 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		408EA879253A9DF10040C725 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		408EA87E253A9E1D0040C725 /* Descriptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Descriptable.swift; sourceTree = "<group>"; };
+		408EA883253A9E3F0040C725 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		408EA889253A9E9E0040C725 /* PhotoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClient.swift; sourceTree = "<group>"; };
+		408EA891253A9F2C0040C725 /* BaseParameterPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParameterPhoto.swift; sourceTree = "<group>"; };
+		408EA896253A9F820040C725 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +193,10 @@
 		4084F82C253A7FCA00D2E0B6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				408EA888253A9E780040C725 /* Photo */,
+				408EA874253A9D500040C725 /* ServiceProtocol.swift */,
+				408EA879253A9DF10040C725 /* APIError.swift */,
+				408EA883253A9E3F0040C725 /* APIClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -206,6 +224,7 @@
 			children = (
 				4084F835253A80CD00D2E0B6 /* Identifiable.swift */,
 				408EA84C253A91C70040C725 /* ViewCodable.swift */,
+				408EA87E253A9E1D0040C725 /* Descriptable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -280,6 +299,16 @@
 				408EA83D253A8DED0040C725 /* PhotoLibraryViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		408EA888253A9E780040C725 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				408EA889253A9E9E0040C725 /* PhotoClient.swift */,
+				408EA891253A9F2C0040C725 /* BaseParameterPhoto.swift */,
+				408EA896253A9F820040C725 /* PhotoService.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,18 +440,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408EA897253A9F820040C725 /* PhotoService.swift in Sources */,
 				408EA857253A93650040C725 /* ScreenSize.swift in Sources */,
 				408EA852253A92370040C725 /* UIViewExtension.swift in Sources */,
+				408EA875253A9D500040C725 /* ServiceProtocol.swift in Sources */,
 				4084F7FF253A7DA100D2E0B6 /* PhotoLibrary.xcdatamodeld in Sources */,
 				408EA843253A90640040C725 /* PhotoLibraryCollectionViewCell.swift in Sources */,
+				408EA884253A9E3F0040C725 /* APIClient.swift in Sources */,
 				4084F836253A80CD00D2E0B6 /* Identifiable.swift in Sources */,
+				408EA88A253A9E9E0040C725 /* PhotoClient.swift in Sources */,
+				408EA892253A9F2C0040C725 /* BaseParameterPhoto.swift in Sources */,
 				408EA823253A86FE0040C725 /* PhotoLibraryCoordinator.swift in Sources */,
 				408EA81B253A86B40040C725 /* PhotoLibraryViewController.swift in Sources */,
 				408EA809253A84C00040C725 /* Coordinator.swift in Sources */,
 				4084F7F5253A7DA100D2E0B6 /* AppDelegate.swift in Sources */,
 				4084F7F7253A7DA100D2E0B6 /* SceneDelegate.swift in Sources */,
+				408EA87F253A9E1D0040C725 /* Descriptable.swift in Sources */,
 				408EA835253A8A160040C725 /* UIViewControler.swift in Sources */,
 				408EA864253A97240040C725 /* PhotoLibraryCollectionViewDelegate.swift in Sources */,
+				408EA87A253A9DF10040C725 /* APIError.swift in Sources */,
 				408EA848253A90DA0040C725 /* PhotoLibraryView.swift in Sources */,
 				4084F82F253A80A100D2E0B6 /* Photo.swift in Sources */,
 				408EA84D253A91C70040C725 /* ViewCodable.swift in Sources */,
