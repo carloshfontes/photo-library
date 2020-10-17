@@ -101,6 +101,7 @@
 		4084F7F3253A7DA100D2E0B6 /* PhotoLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				408EA807253A848C0040C725 /* Coordinator */,
 				4084F833253A80B700D2E0B6 /* Helpers */,
 				4084F82D253A7FE100D2E0B6 /* Models */,
 				4084F82C253A7FCA00D2E0B6 /* Network */,
@@ -177,6 +178,13 @@
 				4084F835253A80CD00D2E0B6 /* Identifiable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		408EA807253A848C0040C725 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
