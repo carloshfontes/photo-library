@@ -26,6 +26,9 @@
 		408EA848253A90DA0040C725 /* PhotoLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA847253A90DA0040C725 /* PhotoLibraryView.swift */; };
 		408EA84D253A91C70040C725 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA84C253A91C70040C725 /* ViewCodable.swift */; };
 		408EA852253A92370040C725 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA851253A92370040C725 /* UIViewExtension.swift */; };
+		408EA857253A93650040C725 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA856253A93650040C725 /* ScreenSize.swift */; };
+		408EA85F253A96520040C725 /* PhotoLibraryCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA85E253A96520040C725 /* PhotoLibraryCollectionViewDataSource.swift */; };
+		408EA864253A97240040C725 /* PhotoLibraryCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408EA863253A97240040C725 /* PhotoLibraryCollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		408EA847253A90DA0040C725 /* PhotoLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryView.swift; sourceTree = "<group>"; };
 		408EA84C253A91C70040C725 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		408EA851253A92370040C725 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		408EA856253A93650040C725 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
+		408EA85E253A96520040C725 /* PhotoLibraryCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		408EA863253A97240040C725 /* PhotoLibraryCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryCollectionViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,7 @@
 			children = (
 				408EA833253A8A090040C725 /* Extensions */,
 				4084F834253A80BE00D2E0B6 /* Protocols */,
+				408EA856253A93650040C725 /* ScreenSize.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -245,6 +252,7 @@
 		408EA818253A86910040C725 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				408EA85E253A96520040C725 /* PhotoLibraryCollectionViewDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 		408EA819253A86970040C725 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				408EA863253A97240040C725 /* PhotoLibraryCollectionViewDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -402,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408EA857253A93650040C725 /* ScreenSize.swift in Sources */,
 				408EA852253A92370040C725 /* UIViewExtension.swift in Sources */,
 				4084F7FF253A7DA100D2E0B6 /* PhotoLibrary.xcdatamodeld in Sources */,
 				408EA843253A90640040C725 /* PhotoLibraryCollectionViewCell.swift in Sources */,
@@ -412,9 +422,11 @@
 				4084F7F5253A7DA100D2E0B6 /* AppDelegate.swift in Sources */,
 				4084F7F7253A7DA100D2E0B6 /* SceneDelegate.swift in Sources */,
 				408EA835253A8A160040C725 /* UIViewControler.swift in Sources */,
+				408EA864253A97240040C725 /* PhotoLibraryCollectionViewDelegate.swift in Sources */,
 				408EA848253A90DA0040C725 /* PhotoLibraryView.swift in Sources */,
 				4084F82F253A80A100D2E0B6 /* Photo.swift in Sources */,
 				408EA84D253A91C70040C725 /* ViewCodable.swift in Sources */,
+				408EA85F253A96520040C725 /* PhotoLibraryCollectionViewDataSource.swift in Sources */,
 				408EA83E253A8DED0040C725 /* PhotoLibraryViewModel.swift in Sources */,
 				408EA811253A85B50040C725 /* AppCoordinator.swift in Sources */,
 			);

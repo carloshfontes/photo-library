@@ -13,12 +13,26 @@ class PhotoLibraryViewController: UIViewController {
     
     private var viewModel: PhotoLibraryViewModel
     
+    private lazy var photoLibraryCollectionDataSource = PhotoLibraryCollectionViewDataSource(photos: viewModel.photos)
     
+    private var photoLibraryCollectionDelegate = PhotoLibraryCollectionViewDelegate()
+    
+    
+    let photoLibraryView: PhotoLibraryView = {
+        let view = PhotoLibraryView(frame: .zero)
+        view.backgroundColor = .white
+        return view
+    }()
     
     
     init(viewModel: PhotoLibraryViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        self.view = photoLibraryView
+    
+        self.setupUI()
+        self.viewModel.delegate = self
+        self.viewModel.loadData()
     }
     
     // MARK: Lifecycle
@@ -26,8 +40,6 @@ class PhotoLibraryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
-        viewModel.delegate = self
         
     }
     
@@ -54,7 +66,10 @@ extension PhotoLibraryViewController: PhotoLibraryDelegate {
     }
     
     func didLoadData() {
-        
+        print("DEBUG: didLoad")
+        self.photoLibraryView.photoCollectionView.dataSource = photoLibraryCollectionDataSource
+        self.photoLibraryView.photoCollectionView.delegate = photoLibraryCollectionDelegate
+        self.photoLibraryView.photoCollectionView.reloadData()
     }
     
     
