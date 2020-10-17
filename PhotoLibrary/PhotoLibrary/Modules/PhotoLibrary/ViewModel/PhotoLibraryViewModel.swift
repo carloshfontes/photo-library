@@ -15,10 +15,20 @@ protocol PhotoLibraryDelegate: class {
 protocol PhotoLibraryViewModelType {
     var delegate: PhotoLibraryDelegate? { get set }
     var photos: [Photo] { get set }
+    func loadData()
 }
 
 final class PhotoLibraryViewModel: PhotoLibraryViewModelType {
-    
+
     weak var delegate: PhotoLibraryDelegate?
     var photos: [Photo] = []
+    
+    func loadData() {
+        photos.append(Photo(id: "aaa", urls: ["xx": "xx"]))
+        photos.append(Photo(id: "aaa", urls: ["xx": "xx"]))
+        photos.append(Photo(id: "aaa", urls: ["xx": "xx"]))
+        photos.append(Photo(id: "aaa", urls: ["xx": "xx"]))
+        delegate?.didLoadData()
+        print("DEBUG: loaded")
+    }
 }
