@@ -13,11 +13,14 @@ final class AppCoordinator: Coordinator {
     
     private let window: UIWindow?
     var presenter: UINavigationController
+    private var photoLibraryCoordinator: PhotoLibraryCoordinator
     
     
     init(window: UIWindow?){
         self.window = window
         self.presenter = UINavigationController()
+        
+        self.photoLibraryCoordinator = PhotoLibraryCoordinator(presenter: presenter)
     }
     
     
@@ -28,6 +31,7 @@ final class AppCoordinator: Coordinator {
         guard let window = self.window else { return }
         
         window.rootViewController = presenter
+        self.photoLibraryCoordinator.start()
         window.makeKeyAndVisible()
     }
     
