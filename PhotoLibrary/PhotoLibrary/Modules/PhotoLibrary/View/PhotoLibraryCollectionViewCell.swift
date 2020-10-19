@@ -11,9 +11,11 @@ class PhotoLibraryCollectionViewCell: UICollectionViewCell, Identifiable {
     
     var photoBackgroundUIImageView: UIImageView = {
         let view = UIImageView(frame: .zero)
-        view.backgroundColor = .black
+        view.contentMode = .scaleToFill
         return view
     }()
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,6 +46,5 @@ extension PhotoLibraryCollectionViewCell: ViewCodable {
         photoBackgroundUIImageView.layer.masksToBounds = false
         photoBackgroundUIImageView.clipsToBounds = true
     }
-    
     
 }

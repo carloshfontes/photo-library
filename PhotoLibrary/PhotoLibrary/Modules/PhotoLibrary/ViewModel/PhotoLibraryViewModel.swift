@@ -9,7 +9,7 @@ import Foundation
 
 protocol PhotoLibraryDelegate: class {
     func willLoadData()
-    func didLoadData()
+    func didLoadData(message: String?)
 }
 
 protocol PhotoLibraryViewModelType {
@@ -24,11 +24,19 @@ final class PhotoLibraryViewModel: PhotoLibraryViewModelType {
     var photos: [Photo] = []
     
     func loadData() {
-        photos.append(Photo(id: "aaa", urls: ["xx": "xx"]))
-        photos.append(Photo(id: "aaa", urls: ["xx": "xx"]))
-        photos.append(Photo(id: "aaa", urls: ["xx": "xx"]))
-        photos.append(Photo(id: "aaa", urls: ["xx": "xx"]))
-        delegate?.didLoadData()
-        print("DEBUG: loaded")
+        let photoClient = PhotoClient()
+        photoClient.getRandomPhotos { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+                
+            case .success(let photos):
+                self.photos = photos
+                self.delegate?.didLoadData(message: nil)
+            case .failure(let error):
+                print("DEBUG: photo view model: ",error.description)
+                self.delegate?.didLoadData(message: error.description)
+
+            }
+        }
     }
 }

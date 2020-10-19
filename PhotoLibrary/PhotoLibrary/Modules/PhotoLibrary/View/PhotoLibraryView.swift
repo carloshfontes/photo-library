@@ -11,6 +11,13 @@ class PhotoLibraryView: UIView {
     
     // MARK: - Properties
     
+    let refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl(frame: .zero)
+        control.tintColor = .green
+        return control
+    }()
+    
+    
     let photoCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -23,8 +30,12 @@ class PhotoLibraryView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.setupUI()
         self.setupViews()
-        
+    }
+    
+    private func setupUI(){
+        self.backgroundColor = UIColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.00)
     }
     
     required init?(coder: NSCoder) {
@@ -44,12 +55,13 @@ extension PhotoLibraryView: ViewCodable {
     }
     
     func setupPhotoCollectionViewConstraints(){
-        photoCollectionView.anchor(top: topAnchor, paddingTop: ScreenSize.height * 0.2)
+        photoCollectionView.anchor(top: topAnchor, paddingTop: ScreenSize.height * 0.18)
         photoCollectionView.anchor(left: leftAnchor, paddingLeft: ScreenSize.width * 0.05)
         photoCollectionView.anchor(right: rightAnchor, paddingRight: ScreenSize.width * 0.05)
-        photoCollectionView.anchor(height: ScreenSize.height * 0.6)
+        photoCollectionView.anchor(bottom: bottomAnchor, paddingBottom: ScreenSize.height * 0.05)
     }
     
 }
+
 
 

@@ -25,7 +25,8 @@ class PhotoLibraryCollectionViewDataSource: NSObject, UICollectionViewDataSource
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoLibraryCollectionViewCell.uniqueIdentifier, for: indexPath) as? PhotoLibraryCollectionViewCell else {
             return UICollectionViewCell()
         }
-        
+        let photo = photos[indexPath.row]
+        cell.photoBackgroundUIImageView.setImage(imageUrl: photo.urls["thumb"] ?? "")
         return cell
     }
     
