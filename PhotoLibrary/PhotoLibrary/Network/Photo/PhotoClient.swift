@@ -22,7 +22,7 @@ struct PhotoClient: APIClient {
     
     func getRandomPhotos(completion: @escaping randomFetchCompletion){
         
-        guard let request = PhotoService.random(count: 30).request else {
+        guard let request = PhotoService.random(count: 20).request else {
             return completion(.failure(.badRequest))
         }
         
